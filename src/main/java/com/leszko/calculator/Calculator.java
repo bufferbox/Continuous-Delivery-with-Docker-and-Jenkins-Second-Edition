@@ -1,3 +1,8 @@
+package com.leszko.calculator;
+
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.stereotype.Service;
+
 /**
 * Calculates the sum of two numbers and caches the result.
 *
@@ -5,12 +10,6 @@
 * @param b the second number
 * @return the sum of the two numbers
 */
-
-package com.leszko.calculator;
-
-import org.springframework.cache.annotation.Cacheable;
-import org.springframework.stereotype.Service;
-
 @Service
 public class Calculator {
         final static int umlNUMBER1 = 3;
