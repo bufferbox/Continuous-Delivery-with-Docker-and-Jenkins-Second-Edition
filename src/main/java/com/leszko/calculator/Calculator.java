@@ -1,10 +1,10 @@
 /**
- * Calculates the sum of two numbers and caches the result.
- *
- * @param a the first number
- * @param b the second number
- * @return the sum of the two numbers
- */
+* Calculates the sum of two numbers and caches the result.
+*
+* @param a the first number
+* @param b the second number
+* @return the sum of the two numbers
+*/
 
 package com.leszko.calculator;
 
