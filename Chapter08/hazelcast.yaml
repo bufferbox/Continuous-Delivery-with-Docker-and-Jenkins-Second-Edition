@@ -5,7 +5,12 @@ metadata:
   labels:
     app: hazelcast
 spec:
-  replicas: 1
+  replicas: 2 
+  strategy: 
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 25%
+      maxSurge: 0
   selector:
     matchLabels:
       app: hazelcast
@@ -19,6 +24,10 @@ spec:
         image: hazelcast/hazelcast:3.12
         ports:
         - containerPort: 5701
+        readinessProbe:
+          httpGet:
+            path: /sum?a=1&b=2
+            port: 8080
 
 ---
 
