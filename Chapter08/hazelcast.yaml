@@ -5,7 +5,7 @@ metadata:
   labels:
     app: hazelcast
 spec:
-  replicas: 2 
+  replicas: 3 
   strategy: 
     type: RollingUpdate
     rollingUpdate:
@@ -24,10 +24,10 @@ spec:
         image: hazelcast/hazelcast:3.12
         ports:
         - containerPort: 5701
-        readinessProbe:
-          httpGet:
-            path: /sum?a=1&b=2
-            port: 8080
+          #readinessProbe:
+          #httpGet:
+            # path: /sum?a=1&b=2
+              #        port: 8080
 
 ---
 
